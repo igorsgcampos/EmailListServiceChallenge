@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">EmailListService</string>
+    <string name="serv_desc">E-mail List Cleanup Service</string>
+</resources>
