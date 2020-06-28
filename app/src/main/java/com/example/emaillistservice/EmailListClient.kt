@@ -6,17 +6,19 @@ import android.content.Intent
 import android.content.ServiceConnection
 import android.os.*
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import org.w3c.dom.Text
+import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
+//the question did not require the implementation of the activity, but I did so in order to test and
+//illustrate how it functions
 class EmailListClient : AppCompatActivity() {
     private lateinit var mMessenger: Messenger
     private var remoteMessenger: Messenger? = null
     private var bound = false
+
     internal inner class IncomingHandler(
         context: Context,
         private val applicationContext: Context = context.applicationContext
@@ -29,7 +31,6 @@ class EmailListClient : AppCompatActivity() {
                 displayText += i.toString() + "\n"
             val textViewReply = findViewById<TextView>(R.id.textViewReply)
             textViewReply.text = displayText
-            //super.handleMessage(msg)
         }
     }
 
